@@ -1,0 +1,29 @@
+{
+  "name": "es6",
+  "version": "1.0.0",
+  "description": "javaSrcipt bignner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devmubeeen/javaScript.git"
+  },
+  "keywords": [
+    "javaScript",
+    "and",
+    "jQuery"
+  ],
+  "author": "mubeen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devmubeeen/javaScript/issues"
+  },
+  "homepage": "https://github.com/devmubeeen/javaScript#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "bootstrap": "^5.1.0",
+    "jquery": "^3.6.0"
+  }
+}
