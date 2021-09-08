@@ -1,0 +1,9 @@
+// @import "compass/reset";
+@import 'global/variable';
+
+// All SCSS Components
+@import 'component/button';
+@import 'component/modal';
+
+// Layout SCSS File
+@import 'layout/aside';

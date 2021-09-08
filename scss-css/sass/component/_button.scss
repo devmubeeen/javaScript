@@ -1,0 +1,45 @@
+// Button Comment
+.btn {
+	background-color: #ccc;
+	border: 0;
+	border-radius: $radius;
+	color: #333;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	line-height: normal;
+	margin: 0 5px 10px;
+	padding: ($p_xs * 2) ($p_xs * 5);
+	text-align: center;
+	text-decoration: none;
+}
+
+.btn-primary {
+	background-color: $primary;
+	color: $white;
+}
+
+.btn-success {
+	background-color: $success;
+	color: $white;
+}
+
+.btn-warning {
+	background-color: $warning;
+	color: $white;
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($warning, 10);
+	}
+}
+
+.btn-danger {
+	background-color: $danger;
+	color: $white;
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($danger, 10);
+	}
+}

@@ -1,0 +1,47 @@
+/* line 2, ../sass/component/_button.scss */
+.btn {
+  background-color: #ccc;
+  border: 0;
+  border-radius: 20px;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  line-height: normal;
+  margin: 0 5px 10px;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* line 17, ../sass/component/_button.scss */
+.btn-primary {
+  background-color: blue;
+  color: #f3f1ff;
+}
+
+/* line 22, ../sass/component/_button.scss */
+.btn-success {
+  background-color: yellowgreen;
+  color: #f3f1ff;
+}
+
+/* line 27, ../sass/component/_button.scss */
+.btn-warning {
+  background-color: orange;
+  color: #f3f1ff;
+}
+/* line 30, ../sass/component/_button.scss */
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active {
+  background-color: #cc8400;
+}
+
+/* line 37, ../sass/component/_button.scss */
+.btn-danger {
+  background-color: red;
+  color: #f3f1ff;
+}
+/* line 40, ../sass/component/_button.scss */
+.btn-danger:hover, .btn-danger:focus, .btn-danger:active {
+  background-color: #cc0000;
+}
