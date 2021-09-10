@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="javaScript lecture">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="mubeen">
+		<!-- <meta http-equiv="refresh" content="30"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>javaScript-literals</title>
+		<!-- custom css -->
+		<link rel="stylesheet" href="../css/custom.css">
+		<!-- bootstrap css -->
+		<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+		<!-- fontawesome free -->
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<nav class="navbar navbar-dark bg-dark">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="../index.html">JavaScritpt</a>
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success" type="submit">Search</button>
+					</form>
+				</div>
+			</nav>
+		</div>
+		<div class="container">
+			<h3 class="mx-3">you can check literals in panel</h3>
+		</div>
+
+		<script>
+			/*
+				Prperties methods and template literals in javaScript
+			*/
+			console.log("we are at lecture 06")
+
+			// const name = 'mubeen';
+			// const greeting = 'good morning';
+			// console.log(greeting + ' ' + name);
+
+
+			let html;
+			html = "<h1>mubeenbhatti</h1>" + "<p>this is my paragraph </p> bhatti";
+
+			// html = html.concat('this', ' ', 'string');
+			// console.log(html)
+			// console.log(html.length);
+			// console.log(html.toLocaleLowerCase());
+			// console.log(html.toUpperCase());
+			// console.log(html);
+
+
+			// console.log(html[0]);
+			// console.log(html[1]);
+			// console.log(html.indexOf('this'));
+			// console.log(html.lastIndexOf('<'));
+			// console.log(html.charAt(3));
+			// console.log(html.endsWith('bhatti'));
+			// console.log(html.includes('bhatti'));
+			// console.log(html.substring(1, 6));
+			// // console.log(html.slice(-5));
+			// console.log(html.slice(0, 4));
+			// console.log(html.split(' '));
+			// console.log(html.repeat('bhatti', 'saab'))
+			console.log(html);
+			console.log(html.replace('mubeen', 'saab'))
+
+			/*
+			===============================
+			template letrals
+			===============================
+			*/
+			// let frut1 = 'oranage\'';
+			// let frut2 = 'apple';
+			// let myHtml = `Hello ${name}
+			// 			<h1> this is heading </h1>
+			// 			${frut2}
+			// 			<p>you like ${frut1}</p>
+			// 			`
+			// document.body.innerHTML = myHtml;
+
+			let martic = '10th class';
+			let inter = '12nd class';
+			let bacholer = '14th class';
+
+			let myHtml = `
+ 							<h1>i pass my ${martic} and</h1>
+ 							<h2>i passed ${inter} and</h2>
+							<h3>i passed ${bacholer} and continue</h3>
+						`
+			document.body.innerHTML = myHtml
+		</script>
+		<!-- jquery -->
+		<!-- <script src="node_modules/jquery/dist/jquery.js"></script> -->
+		<!-- jquery-cdn -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<!-- bootstrap-js -->
+		<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	</body>
+
+</html>

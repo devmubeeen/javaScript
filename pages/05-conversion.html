@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="javaScript lecture">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="mubeen">
+		<!-- <meta http-equiv="refresh" content="30"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>javaScript-conversion</title>
+		<!-- custom css -->
+		<link rel="stylesheet" href="../css/custom.css">
+		<!-- bootstrap css -->
+		<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+		<!-- fontawesome free -->
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<nav class="navbar navbar-dark bg-dark">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="../index.html">JavaScritpt</a>
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success" type="submit">Search</button>
+					</form>
+				</div>
+			</nav>
+		</div>
+		<div class="container">
+			<h3 class="mx-3">you can check conversion in panel</h3>
+		</div>
+
+		<script>
+			// type conversion and coercion
+
+
+
+			/*
+			====================================
+			Type conversion
+			====================================
+			*/
+			console.log('welcome to lecture 05');
+			let myVar;
+			// myVar = 34; // change data type  use string function
+			myVar = String(34);
+			console.log(myVar, (typeof myVar));
+
+			// let booleanVar = true;
+			let booleanVar = String(true);
+			console.log(booleanVar, (typeof booleanVar));
+
+
+			let date = String(new Date());
+			console.log(date, (typeof date));
+
+			// let arr = [1, 2, 3, 4, 5];
+			let arr = String([1, 2, 3, 4, 5, 6, 7,]);
+			// console.log(arr.length, (typeof arr));
+
+			let i = 8;
+			// console.log(i.toString());
+
+			// let stri = Number("1231ss4"); NaN not a number
+			let stri = Number(123456);
+			// stri = Number(true);
+			stri = (false);
+			// stri = Number([1, 2, 3, 4, 5, 6]); NaN not a number
+			// stri = Number(ture);
+			console.log(stri, (typeof stri));
+
+			// let number = toString(34);
+			// let number = parseInt('34.111'); show interger value
+			let number = parseFloat('34.111'); //show float value
+			// let number = Number('38.111'); show float value
+			// let number = parseInt(33);
+			console.log(number.toFixed(3), (typeof number));
+
+			/*
+			====================================
+			Type coercion
+			====================================
+			*/
+
+			// let myStr = "1000";
+			// let myNum = 12;
+			// console.log(myStr + myNum);
+
+			let myStr = Number("1000");
+			let myNum = 12;
+			console.log(myStr + myNum)
+		</script>
+		<!-- jquery -->
+		<!-- <script src="node_modules/jquery/dist/jquery.js"></script> -->
+		<!-- jquery-cdn -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<!-- bootstrap-js -->
+		<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	</body>
+
+</html>

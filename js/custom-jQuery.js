@@ -139,11 +139,10 @@ $(document).ready(function () {
 	// $('#mubeen').removeClass('myClass2');
 	// $('#mubeen').css('background-color', 'red');
 	// $('#mubeen').css('background-color');
-	
+
 	// ===========================================
 	// AJAX
-	$.get('https://code.jquery.com/jquery-3.1.1.js', function(data,status){alert(data);})
-
+	$.get('https://code.jquery.com/jquery-3.1.1.js', function (data, status) { alert(data); })
 })
 
 
