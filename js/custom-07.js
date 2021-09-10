@@ -56,5 +56,5 @@ let mjobj = {
 console.log(mjobj);
 console.log(mjobj.isActive);
 console.log(mjobj['channel']);
-console.log(mjobj.channel)
+console.log(mjobj.channel);
 console.log(mjobj["my lastName"]);
