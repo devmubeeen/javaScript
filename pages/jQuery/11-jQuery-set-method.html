@@ -43,7 +43,41 @@
 				</div>
 			</nav>
 		</div>
+
 		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="card p-4 my-3">
+						<form id="submit-form" method="GET">
+							<div class="mb-3">
+								<label for="exampleInputEmail1" class="form-label">Email address</label>
+								<input type="email" class="form-control" id="form-email" aria-describedby="emailHelp">
+								<div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+								</div>
+							</div>
+							<div class="mb-3">
+								<label for="exampleInputPassword1" class="form-label">Password</label>
+								<input type="password" class="form-control" id="form-password">
+							</div>
+
+							<div class="mb-3">
+								<label for="exampleInputPassword1">City</label>
+								<select class="form-select" aria-label="Default select example" id="select-country">
+									<option selected>Open this select menu</option>
+									<option value="Islamabad">Islamabad</option>
+									<option value="Lahore">Lahore</option>
+									<option value="Faisalabad">Faisalabad</option>
+								</select>
+							</div>
+							<div class="mb-3 form-check">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Check me out</label>
+							</div>
+							<button class="btn btn-primary" id="submitSecondry">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
 			<h3 class="my-3">jQuery Set method</h3>
 			<h1>set method</h1>
 			<div class="card" id="box" class="test" style="border: 1px solid black; background-color: pink;">
@@ -91,39 +125,6 @@
 				<div class="col">
 					<div class="card" id="card">
 						<p></p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<div class="card p-4 my-3">
-						<form id="submit-form" id="clickSecondary">
-							<div class="mb-3">
-								<label for="exampleInputEmail1" class="form-label">Email address</label>
-								<input type="email" class="form-control" id="form-email" aria-describedby="emailHelp">
-								<div id="emailHelp" class="form-text">We'll never share your email with anyone else.
-								</div>
-							</div>
-							<div class="mb-3">
-								<label for="exampleInputPassword1" class="form-label">Password</label>
-								<input type="password" class="form-control" id="form-password">
-							</div>
-
-							<div class="mb-3">
-								<label for="exampleInputPassword1">City</label>
-								<select class="form-select" aria-label="Default select example" id="select-country">
-									<option selected>Open this select menu</option>
-									<option value="Islamabad">Islamabad</option>
-									<option value="Lahore">Lahore</option>
-									<option value="Faisalabad">Faisalabad</option>
-								</select>
-							</div>
-							<div class="mb-3 form-check">
-								<input type="checkbox" class="form-check-input" id="exampleCheck1">
-								<label class="form-check-label" for="exampleCheck1">Check me out</label>
-							</div>
-							<button class="btn btn-primary" id="submitSecondry">Submit</button>
-						</form>
 					</div>
 				</div>
 			</div>
