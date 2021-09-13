@@ -33,11 +33,11 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<h1>jQuery on & off method</h1>
+						<h1>jQuery append & prepent method</h1>
 						<div class="card mb-3">
 							<img src="https://placeimg.com/1000/200/any" class="card-img-top" alt="...">
 							<div class="card-body">
-								<h2>jQuery on & off method</h2>
+								<h2>jQuery append & prepent method</h2>
 								<h5 class="card-title">Set method</h5>
 								<ul class="list-group list-group-flush">
 									<li class="list-group-item">jQuery on method
@@ -76,6 +76,32 @@
 						</div>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col">
+						<div class="card" id="card">
+							<p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to
+								demonstrate the visual form of a document or a typeface without relying on meaningful
+								content. Lorem ipsum may be used as a placeholder before final copy is available</p>
+						</div>
+						<button class="btn btn-primary" id="append">append</button>
+						<button class="btn btn-primary" id="prepent">prepend</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="card my-5" id="order-card">
+							<ol id="order-list">
+								<li>link new tab</li>
+								<li>link new tab</li>
+								<li>link new tab</li>
+								<li>link new tab</li>
+								<li>link new tab</li>
+							</ol>
+							<button class="btn btn-secondary" id="append-secondary">append</button>
+							<button class="btn btn-secondary" id="prepent-secondary">prepend</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -89,31 +115,22 @@
 		<script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
 		<script>
-			/*
-			on() //method
-			off() // method
-			*/
-			// $(document).ready(function () {
-			// 	$(".card").on("mouseenter mouseleave", function () {
-			// 		$(this).toggleClass("bg-danger")
-			// 	})
-			// })
 			$(document).ready(function () {
-				$(".card").on({
-					"click": function () {
-						$(this).css({ "background-color": "navy", "color": "#fff" });
-					},
-					"mouseover": function () {
-						$(this).css("background-color", "yellow");
-					},
-					"mouseout": function () {
-						$(this).css("background-color", "green");
-					}
+				$("#prepent").click(function () {
+					$("#card").prepend("<h1>new line add prepend</h1>")
 				});
-				$("button").click(function () {
-					$(".card").off("mouseout mouseover");
+				$("#append").click(function () {
+					$("#card").append("<h1>new line add apped</h1>")
 				});
-			});
+				// list
+				$("#append-secondary").click(function () {
+					$("#order-list").append("<li>new list appended</li>")
+				});
+				$("#prepent-secondary").click(function () {
+					$("#order-list").prepend("<li>new list prepend</li>")
+				})
+
+			})
 		</script>
 	</body>
 
