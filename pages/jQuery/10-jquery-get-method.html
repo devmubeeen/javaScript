@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="javaScript lecture">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="mubeen">
+		<!-- <meta http-equiv="refresh" content="30"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>jQuery</title>
+		<!-- custom css -->
+		<link rel="stylesheet" href="../../../css/custom.css">
+		<!-- bootstrap css -->
+		<link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+		<!-- fontawesome free -->
+		<style>
+			.card-img-top {
+				width: 100%;
+				height: 200px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<nav class="navbar navbar-dark bg-dark">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="../../index.html">jQuery</a>
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success" type="submit">Search</button>
+					</form>
+				</div>
+			</nav>
+		</div>
+		<div class="container">
+			<h3 class="my-3">jQuery Get method</h3>
+			<div class="row">
+				<div class="col">
+					<div class="card mb-3">
+						<img src="https://placeimg.com/1000/200/any" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">Get method</h5>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">get method text()
+									<code>
+									$(html).text(function(){});
+									</code>
+								</li>
+								<li class="list-group-item">get metho html()
+									<code>
+										$(document).html(function(){});
+									</code>
+								</li>
+								<li class="list-group-item">get method attr()
+									<code>
+										$(document).attr(function(){});
+									</code>
+								</li>
+								<li class="list-group-item">get method val() use for form value get
+									<code>
+										$(document).val(function(){});
+									</code>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="card">
+						<p>dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							industry'sstandarddummy text ever since the 1500s, when an unknown printer took a galley of
+							type and scrambleditto make a type specimen book. It has survived not only five centuries,
+							but also the leapintoelectronic typesetting, remaining essentially unchanged. It was
+							popularised in the 1960swiththe release of Letraset sheets containing Lorem Ipsum passages,
+							and more recently withdesktoppublishing software like Aldus PageMaker including versions of
+							Lorem Ipsum.dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							industry'sstandarddummy text ever since the 1500s, when an unknown printer took a galley of
+							type and scrambleditto make a type specimen book. It has survived not only five centuries,
+							but also the leapintoelectronic typesetting, remaining essentially unchanged. It was
+							popularised in the 1960swiththe release of Letraset sheets containing Lorem Ipsum passages,
+							and more recently withdesktoppublishing software like Aldus PageMaker including versions of
+							Lorem Ipsum.dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+							industry'sstandarddummy text ever since the 1500s, when an unknown printer took a galley of
+							type and scrambleditto make a type specimen book. It has survived not only five centuries,
+							but also the leapintoelectronic typesetting, remaining essentially unchanged. It was
+							popularised in the 1960swiththe release of Letraset sheets containing Lorem Ipsum passages,
+							and more recently withdesktoppublishing software like Aldus PageMaker including versions of
+							Lorem Ipsum.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="card p-4">
+						<form id="submit-form">
+							<div class="mb-3">
+								<label for="exampleInputEmail1" class="form-label">Email address</label>
+								<input type="email" class="form-control" id="form-email" aria-describedby="emailHelp">
+								<div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+								</div>
+							</div>
+							<div class="mb-3">
+								<label for="exampleInputPassword1" class="form-label">Password</label>
+								<input type="password" class="form-control" id="form-password">
+							</div>
+
+							<div class="mb-3">
+								<label for="exampleInputPassword1">City</label>
+								<select class="form-select" aria-label="Default select example" id="select-country">
+									<option selected>Open this select menu</option>
+									<option value="Islamabad">Islamabad</option>
+									<option value="Lahore">Lahore</option>
+									<option value="Faisalabad">Faisalabad</option>
+								</select>
+							</div>
+							<div class="mb-3 form-check">
+								<input type="checkbox" class="form-check-input" id="exampleCheck1">
+								<label class="form-check-label" for="exampleCheck1">Check me out</label>
+							</div>
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jquery -->
+		<!-- <script src="node_modules/jquery/dist/jquery.js"></script> -->
+		<!-- jquery-cdn -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<!-- bootstrap-js -->
+		<script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+		<script>
+			/*
+			get method text() 
+			get method html()
+			get method val()
+			get method attr()
+			*/
+
+			$(document).ready(function () {
+
+				// text() get method
+				// $(".card").eq(1).text(function () {
+				// 	var a = $(this).text();
+				// 	console.log("you useing get method text() used" + a)
+				// });
+
+				// get method html()
+				// $("body").html(function () {
+				// 	var b = $(this).html();
+				// 	console.log("get method html()" + b);
+				// })
+
+				// get method attr()
+				// var c = $(".navbar").attr('class');
+				// console.log(c);
+
+				// get method val()
+				$("#submit-form").submit(function () {
+					var a = $("#form-email").val();
+					var b = $("#form-password").val();
+					var c = $("#select-country").val();
+					alert(" Email: " + a + " Password: " + b + " Country: " + c);
+				})
+
+			})
+		</script>
+	</body>
+
+</html>
