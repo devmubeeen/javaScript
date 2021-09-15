@@ -16,6 +16,10 @@
 		<link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
 		<!-- fontawesome free -->
 		<style>
+			.box {
+				max-height: 200px;
+				overflow-y: scroll;
+			}
 		</style>
 	</head>
 
@@ -34,40 +38,30 @@
 
 				<div class="row">
 					<div class="col">
-						<h1>jQuery animate method</h1>
+						<h1>jQuery stop method</h1>
 						<div id="box" class="card mb-3">
-							<img src="https://placeimg.com/1000/200/any" class="card-img-top w-25" alt="...">
+							<img src="https://placeimg.com/1000/200/any" class="card-img-top" alt="...">
 							<div class="card-body">
-								<h2>jQuery animate method</h2>
-								<h5 class="card-title">jQuery animate method</h5>
+								<h2>jQuery stop method</h2>
+								<h5 class="card-title">jQuery stop method</h5>
 								<ul class="list-group list-group-flush">
-									<li class="list-group-item">jQuery animate method
+									<li class="list-group-item">jQuery stop method
 										<code>
 											$("document").ready(function(){
-												$(selector).animate({params},speed,callback);
-												<!-- almost any css property (color, background-color) -->
-												<!-- css property should be in camel case -->
-												<!-- padding-left into paddingLeft -->
+												stop();
 											});
 											</code>
 									</li>
-									<!-- <li class="list-group-item">jQuery slideOut method
-										<code>
-											$("document").ready(function(){
-												slideDown()
-											});
-										</code>
-									</li>
-									<li class="list-group-item">
-										jQuery slideToggle method
-										<code>
-											$(document).ready(function(){
-												slideToggle()
-											})
-										</code>
-									</li> -->
 								</ul>
-								<button class="btn btn-danger btn-sm" id="animateBtn">animate</button>
+								<button class="btn btn-primary btn-sm" id="animate">animate</button>
+								<button class="btn btn-danger btn-sm" id="stop">stop</button>
+								<div class="card p-3 bg-success box">
+									<p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things
+										like HTML document traversal and manipulation, event handling, animation, and
+										Ajax much simpler with an easy-to-use API that works across a multitude of
+										browsers. With a combination of versatility and extensibility, jQuery has
+										changed the way that millions of people write JavaScript</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -85,32 +79,24 @@
 		<!-- bootstrap-js -->
 		<script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 		<script>
-			// $(document).ready(function () {
-			// 	$("#animateBtn").click(function () {
-			// 		$(".card").animate({
-			// 			left: '100px',
-			// 			width: '500px',// +500, toggle
-			// 			boderWidth: '10px'
-			// 		}, "slow", function () {
-			// 			console.log("animation has been done");
-			// 		})
-			// 	})
-			// })
 			$(document).ready(function () {
-				$("#animateBtn").click(function () {
-					$(".card").animate({
-						left: "150px"
-					});
-					$(".card").animate({
-						top: "150px"
-					});
-					$(".card").animate({
-						width: "+1600" //+=100 means => (100+100)
-					}, function () {
-						console.log("first animation que complete");
-					});
+				$("#animate").click(function () {
+					$(".box").animate({
+						left: "500px",
+						width: "300px", // +100 , toggle
+						fontSize: "32px",// font color and background color cannot use
+
+					}, 3000, function () {
+						console.log("animation has done");
+					})
 				});
-			})
+				$("#stop").click(function () {
+					// $(".box").stop();
+					// $(".box").stop(true); // stop all animation use ture
+					$(".box").stop(true, true); //stop method can used in fade all method
+
+				})
+			});
 		</script>
 
 	</body>
