@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="javaScript lecture">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="mubeen">
+		<!-- <meta http-equiv="refresh" content="30"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>jQuery</title>
+		<!-- custom css -->
+		<link rel="stylesheet" href="../../../css/custom.css">
+		<!-- bootstrap css -->
+		<link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+		<!-- fontawesome free -->
+		<style>
+		</style>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<nav class="navbar navbar-dark bg-dark">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="../../index.html">jQuery</a>
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success" type="submit">Search</button>
+					</form>
+				</div>
+			</nav>
+			<div class="container">
+
+				<div class="row">
+					<div class="col">
+						<h1>jQuery hasClass method</h1>
+						<div id="box" class="card mb-3">
+							<img src="https://placeimg.com/1000/200/any" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h2>jQuery hasClass method</h2>
+								<h5 class="card-title">hasClass method</h5>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">jQuery scrollTop() method
+										<code>
+											$("document").ready(function(){
+												scrollTop()
+											});
+											</code>
+									</li>
+									<li class="list-group-item">jQuery scrollLeft method
+										<code>
+											$("document").ready(function(){
+												scrollLeft()
+											});
+										</code>
+									</li>
+									<li class="list-group-item">
+										<p></p>
+									</li>
+								</ul>
+								<button class="btn btn-success" id="hasClass">hasClass</button>
+								<!--<button class="btn btn-primary btn-sm" id="scrolltop">scrollTop</button>
+								<button class="btn btn-primary btn-sm" id="scrollleft">scrollLeft</button> -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- jquery -->
+		<!-- <script src="node_modules/jquery/dist/jquery.js"></script> -->
+		<!-- jquery-cdn -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<!-- bootstrap-js -->
+		<script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+		<script>
+			$(document).ready(function () {
+				$("#hasClass").click(function () {
+					// console.log($("#box").hasClass('mb-3'));
+					var x = $("#box").hasClass('card');
+					if (x == true) {
+						console.log("Yes");
+					} else (
+						console.log("No")
+					)//check in console panel hasClass
+				});
+			});
+		</script>
+	</body>
+
+</html>

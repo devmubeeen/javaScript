@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="javaScript lecture">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="mubeen">
+		<!-- <meta http-equiv="refresh" content="30"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>jQuery</title>
+		<!-- custom css -->
+		<link rel="stylesheet" href="../../../css/custom.css">
+		<!-- bootstrap css -->
+		<link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+		<!-- fontawesome free -->
+		<style>
+		</style>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<nav class="navbar navbar-dark bg-dark">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="../../index.html">jQuery</a>
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success" type="submit">Search</button>
+					</form>
+				</div>
+			</nav>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<h1>jQuery width & height method</h1>
+						<div class="card mb-3">
+							<img src="https://placeimg.com/1000/200/any" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h2>jQuery width & height method</h2>
+								<h5 class="card-title">Replace width & height method</h5>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">jQuery wrapall() method
+										<code>
+											$("document").ready(function(){
+												width()
+												height()
+												innerWidth()
+												innerHeight()
+												outerWidth()
+												outerHeight()
+												outHeight()
+												outerWidth(true)
+												outerHeight(true)
+											});
+											</code>
+									</li>
+									<li class="list-group-item">jQuery wrapinner method
+										<code>
+											$("document").ready(function(){
+												wrapinner();
+											});
+										</code>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="card p-3" id="card">
+							<!-- <p>width of card is :</p> -->
+						</div>
+					</div>
+				</div>
+				<button class="btn btn-primary mt-3" id="width">width</button>
+				<button class="btn btn-primary mt-3" id="height">height</button>
+			</div>
+		</div>
+
+
+		<!-- jquery -->
+		<!-- <script src="node_modules/jquery/dist/jquery.js"></script> -->
+		<!-- jquery-cdn -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<!-- bootstrap-js -->
+		<script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+		<script>
+			/*
+			width();
+			height();
+			innerWidth();
+			innerHeight();
+			outerWidth();
+			outerHeight();
+			outHeight();
+			outerWidth(true);
+			outerHeight(true);
+			*/
+			$(document).ready(function () {
+				$("#width").click(function () {
+					// var a = $(".card").width();
+					// $("#card").html("<h1>width of card is :</h1>" + a);
+					// var b = $(".card").innerWidth();
+					// $("#card").html("<h2>innetWitdh of card is :</h2>" + b);
+					console.clear();
+					console.log("width of card is : " + $(".card").width());
+					console.log("width of card is : " + $(".card").innerWidth());
+					console.log("outerWidth of card is : " + $(".card").outerWidth());
+					console.log("outerWith of card (ture) : " + $(".card").outerWidth(true));
+					// console.clear();
+
+
+				});
+				$("#height").click(function () {
+					console.log("height of card is : " + $(".card").height());
+					console.log("innerheight of card is :" + $(".card").innerHeight());
+					console.log("outerHight of card is :" + $(".card").outerHeight());
+					console.log("outerheigth(true) of card is : " + $(".card").outerHeight(true));
+				})
+
+				// $(".card").width();
+			})
+		</script>
+	</body>
+
+</html>

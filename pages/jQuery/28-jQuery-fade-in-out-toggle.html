@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="javaScript lecture">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="mubeen">
+		<!-- <meta http-equiv="refresh" content="30"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>jQuery</title>
+		<!-- custom css -->
+		<link rel="stylesheet" href="../../../css/custom.css">
+		<!-- bootstrap css -->
+		<link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+		<!-- fontawesome free -->
+		<style>
+		</style>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<nav class="navbar navbar-dark bg-dark">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="../../index.html">jQuery</a>
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success" type="submit">Search</button>
+					</form>
+				</div>
+			</nav>
+			<div class="container">
+
+				<div class="row">
+					<div class="col">
+						<h1>jQuery fade in, out, toggle method</h1>
+						<div id="box" class="card mb-3">
+							<img src="https://placeimg.com/1000/200/any" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h2>jQueryfade in, out, toggle method</h2>
+								<h5 class="card-title">fade in, out, toggle method</h5>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">jQuery fadein method
+										<code>
+											$("document").ready(function(){
+												fadeIn()
+											});
+											</code>
+									</li>
+									<li class="list-group-item">jQuery fadeout method
+										<code>
+											$("document").ready(function(){
+												fadeOut()
+											});
+										</code>
+									</li>
+									<li class="list-group-item">
+										jQuery fadeToggle method
+										<code>
+											$(document).ready(function(){
+												fadeToggle()
+											})
+										</code>
+									</li>
+									<li class="list-group-item">
+										jQuery fadeTo method
+										<code>
+											$(document).ready(function(){
+												fadeTo()
+											})
+										</code>
+									</li>
+								</ul>
+								<button class="btn btn-danger btn-sm" id="fadeOut">fadeOut</button>
+								<button class="btn btn-success btn-sm" id="fadeIn">fadeIn</button>
+								<button class="btn btn-dark btn-sm" id="fadeToggle">fadeToggle</button>
+								<button class="btn btn-warning btn-sm" id="fadeTo">fadeTo</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- jquery -->
+		<!-- <script src="node_modules/jquery/dist/jquery.js"></script> -->
+		<!-- jquery-cdn -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<!-- bootstrap-js -->
+		<script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+		<script>
+			$(document).ready(function () {
+				$("#fadeOut").click(function () {
+					$(".card-img-top").fadeOut(1000, function () {
+						console.log("img fade out done");
+					});
+				});
+				$("#fadeIn").click(function () {
+					$(".card-img-top").fadeIn(1000, function () {
+						console.log("img fade in done");
+					});
+				});
+				$("#fadeToggle").click(function () {
+					$(".card-img-top").fadeToggle(2000, function () {
+						console.log("img fade toggle done");
+					});
+				});
+				$("#fadeTo").click(function () {
+					// $(".card-img-top").fadeTo(2000, 0.3 function)
+					// 			(speed,opacity,callback)
+					$(".card-img-top").fadeTo(2000, 0.3, function () {
+						console.log("img fade To done");
+					})
+				});
+			});
+		</script>
+
+	</body>
+
+</html>
