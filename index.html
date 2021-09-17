@@ -40,7 +40,7 @@
 					<div class="col-md-6">
 						<h2 class="my-4">javaScript Learning</h2>
 						<div class="list-group">
-							<a href="pages/02-console.html" class="list-group-item list-group-item-action active">
+							<a href="pages/02-console.html" class="list-group-item list-group-item-action">
 								02: javaScript console
 							</a>
 							<a href="pages/03-variable.html" class="list-group-item list-group-item-action">
@@ -74,7 +74,7 @@
 					<div class="col-md-6">
 						<h2 class="my-4">jQuery Learning</h2>
 						<div class="list-group">
-							<a href="pages/jQuery/01-JQuery.html" class="list-group-item list-group-item-action active">
+							<a href="pages/jQuery/01-JQuery.html" class="list-group-item list-group-item-action">
 								01: jQuery intro
 							</a>
 							<a href="pages/jQuery/05-jQuery-selector.html"
@@ -187,6 +187,26 @@
 							<a href="pages/jQuery/31-jQuery-stop.html" class="list-group-item list-group-item-action">
 								31: jQuery stop method
 							</a>
+							<a href="pages/jQuery/32-method-chaning.html"
+								class="list-group-item list-group-item-action">
+								32: jQuery chaining method
+							</a>
+							<a href="pages/jQuery/33-jQjuery-ancestors-methods.html"
+								class="list-group-item list-group-item-action">
+								33: jQuery parents parentUntil closet offsetParent method
+							</a>
+							<a href="pages/jQuery/34-jQuery-Decendants-methods.html"
+								class="list-group-item list-group-item-action">
+								34: jQuery Decendants method
+							</a>
+							<a href="pages/jQuery/35-jQuery-siblings-methods.html"
+								class="list-group-item list-group-item-action">
+								35: jQuery Siblings method
+							</a>
+							<a href="pages/jQuery/36-jQuery-filtering-method.html"
+								class="list-group-item list-group-item-action">
+								36: jQuery filtering method
+							</a>
 						</div>
 					</div>
 				</div>
@@ -228,7 +248,17 @@
 
 		<script>
 			$(document).ready(function () {
-				$(".list-group").css({ "max-height": "420px", "overflow-y": "scroll" })
+				$(".list-group").css({ "max-height": "420px", "overflow-y": "scroll" });
+				/*
+				$(".card").mouseenter(function () {
+					$(".card").css("background-color", "orange")
+				})
+				*/
+
+				$(".list-group-item").hover(function () {
+					$(this).toggleClass("active");
+				})
+
 			})
 		</script>
 	</body>

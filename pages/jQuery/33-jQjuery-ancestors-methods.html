@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="javaScript lecture">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="mubeen">
+		<!-- <meta http-equiv="refresh" content="30"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>jQuery</title>
+		<!-- custom css -->
+		<link rel="stylesheet" href="../../../css/custom.css">
+		<!-- bootstrap css -->
+		<link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+		<!-- fontawesome free -->
+		<style>
+			.main-outer {
+				background-color: rgb(188, 207, 247);
+				border: 1px solid rgb(39, 71, 141);
+				padding: 30px;
+			}
+
+			.main-outer .outer {
+				background-color: rgb(253, 183, 125);
+				border: 1px solid rgb(199, 90, 0);
+				padding: 30px;
+			}
+
+			.main-outer .outer .inner {
+				background-color: rgb(255, 199, 238);
+				border: 1px solid rgb(197, 52, 142);
+				padding: 30px;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				position: relative;
+			}
+
+			.main-outer .outer .inner::after,
+			.main-outer .outer .inner::before {
+				content: "";
+				display: table;
+				clear: both;
+			}
+
+			.main-outer .outer .inner .child-a,
+			.child-b,
+			.child-c,
+			.child-d {
+				background-color: rgb(125, 235, 250);
+				border: 1px solid rgb(18, 157, 167);
+				padding: 20px;
+				text-align: center;
+				text-transform: uppercase;
+				width: 150px;
+				height: 150px;
+				/* float: left;
+				margin: 10px auto; */
+			}
+
+			section {
+				padding: 30px 15px;
+				background-color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<nav class="navbar navbar-dark bg-dark">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="../../index.html">jQuery</a>
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success" type="submit">Search</button>
+					</form>
+				</div>
+			</nav>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<h1>jQuery Ancestors method</h1>
+						<div class="main-outer">
+							<h2>Main-outer</h2>
+							<div class="outer">
+								<h2>Outer</h2>
+								<section>
+									<div class="inner">
+										<h2>Inner</h2>
+										<div class="child-a">
+											<h5>A</h5>
+										</div>
+										<div class="child-b">
+											<h5>B</h5>
+										</div>
+										<div class="child-c">
+											<h5>C</h5>
+										</div>
+										<div class="child-d">
+											<h5>D</h5>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<h1>jQuery parents parentUntil closet offsetParent method</h1>
+						<div id="box" class="card mb-3">
+							<!-- <img src="https://placeimg.com/1000/200/any" class="card-img-top" alt="..."> -->
+							<div class="card-body">
+								<h2>jQuery parents parentUntil closet offsetParent method</h2>
+								<h5 class="card-title">jQuery parents parentUntil closet offsetParent method</h5>
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">jQuery selector method
+										<code>
+											$("document").ready(function(){
+												$(selector).method();
+											});
+										</code>
+									</li>
+									<li class="list-group-item">jQuery Dom Traversing method
+										<code>
+											Ancestors methods,
+											Descendants methods,
+											Siblings Methods,
+											Filtering Methods
+										</code>
+									</li>
+									<li class="list-group-item">jQuery Ancestors method <br>
+										<code>
+											parent <br>
+											grandparent <br>
+											great-granparent <br>
+										
+										</code>
+									</li>
+									<li class="list-group-item">jQuery Ancestors method <br>
+										<code>
+											$(selected).parent(); <br>
+											$(selected).parents(); <br>
+											$(selected).parentsUntil() <br>
+											$(selected).closest() <br>
+											$(selected).offsetParent() <br>
+										</code>
+									</li>
+								</ul>
+
+								<button class="btn btn-secondary btn-sm" id="animate">animate</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- jquery -->
+		<!-- <script src="node_modules/jquery/dist/jquery.js"></script> -->
+		<!-- jquery-cdn -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<!-- bootstrap-js -->
+		<script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+		<script>
+			$(document).ready(function () {
+
+				/*
+					parent();
+					parents();
+					parentsUntil();
+					offsetParent();
+					closest();
+				*/
+				// 1: finde the immediate parent
+				// $(".child-c h5, .child-a h5").parent().css({ "background": "black", "color": "white" })
+
+				// 2: finde all paretes of the selected element
+				// $(".child-c").parents().css({ "background": "black", "color": "White" });
+
+				// 2: selected element finde the main outer parents thorugh out passing parameters like => selector/id/class
+				// $(".child-b").parents(".outer").css({ "background": "black", "color": "White" });
+
+				// 3: element select particular range we can finde between start to end
+				// $(".child-c").parentsUntil(".main-outer").css({ "background": "black", "color": "White" });
+
+				// 4: element of them select that has first tag position ==> property relative
+				// $(".child-a").offsetParent().css({ "background": "black", "color": "White" });
+
+				// 5: finde the close => (element pass in parameter) like of the dom
+				$(".child-d").closest("section").css({ "background": "black", "color": "White" });
+			});
+		</script>
+
+	</body>
+
+</html>
